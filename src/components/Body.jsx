@@ -1,5 +1,3 @@
-function Body (props) {
-    return <div className="modal-body">{props.children}</div>
-}
+const Body = ({children}) => <div className="modal-body">{children}</div>
 
 export default Body

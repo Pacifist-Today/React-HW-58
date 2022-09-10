@@ -1,4 +1,5 @@
 import React from "react";
+import cn from "classnames"
 import Header from "./Header";
 import Body from "./Body";
 import Footer from "./Footer";
@@ -9,14 +10,20 @@ class Modal extends React.Component {
     static Footer = Footer
 
     render() {
+        const {isOpen, toggle} = this.props
+        const modalClass = cn ({
+            'modal': !isOpen,
+            'modal fade show': isOpen
+        })
+        const modalStyles = isOpen ? {display: "block"} : {display: "none"}
+
         return (
-            <div className={this.props.isOpen ? "modal fade show" : "modal"}
-                 style={this.props.isOpen ? {display: "block"} : {display: "none"}} role="dialog">
+            <div className={modalClass} style={modalStyles} role="dialog">
                 <div className="modal-dialog">
                      <div className="modal-content">
-                        <Modal.Header toggle = {this.props.toggle}>Modal title</Modal.Header>
+                         <Modal.Header toggle={toggle}></Modal.Header>
                         <Modal.Body>Lorem ipsum dolor sit amet, consectetur adipisicing elit</Modal.Body>
-                        <Modal.Footer toggle = {this.props.toggle}>Cancel</Modal.Footer>
+                        <Modal.Footer toggle={toggle}>Cancel</Modal.Footer>
                     </div>
                 </div>
              </div>

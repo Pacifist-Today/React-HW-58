@@ -1,5 +1,5 @@
 import React from "react";
-import Modal from  "./Modal"
+import Modal from "./components/Modal"
 
 class App extends React.Component {
     constructor(props) {
@@ -19,7 +19,7 @@ class App extends React.Component {
         return (
             <div>
                 <button type="button" className="modal-open-button btn btn-danger" onClick={this.toggle}>Open</button>
-                <Modal isOpen={this.state.isOpen} />
+                <Modal isOpen={this.state.isOpen} toggle={this.toggle} />
             </div>
         );
     }

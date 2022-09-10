@@ -21,9 +21,9 @@ class Modal extends React.Component {
             <div className={modalClass} style={modalStyles} role="dialog">
                 <div className="modal-dialog">
                      <div className="modal-content">
-                         <Modal.Header toggle={toggle}></Modal.Header>
-                        <Modal.Body>Lorem ipsum dolor sit amet, consectetur adipisicing elit</Modal.Body>
-                        <Modal.Footer toggle={toggle}>Cancel</Modal.Footer>
+                         <Modal.Header toggle={toggle}>Modal title</Modal.Header>
+                         <Modal.Body>Lorem ipsum dolor sit amet, consectetur adipisicing elit</Modal.Body>
+                         <Modal.Footer toggle={toggle}>Cancel</Modal.Footer>
                     </div>
                 </div>
              </div>

@@ -16,10 +16,10 @@ const Footer = (props) => {
     )
 }
 
-Header.defaultProps = {
-    toggle: () => {
-
-    }
-}
+// Footer.defaultProps = {
+//     toggle: () => {
+//
+//     }
+// }
 
 export default Footer

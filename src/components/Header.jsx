@@ -1,7 +1,5 @@
-import React from "react";
-
 const Header = (props) => {
-    const {children, toggle} = props
+    const {children, changeHandler} = props
 
     return (
         <div className="modal-header">
@@ -11,16 +9,15 @@ const Header = (props) => {
                 className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
-                onClick={toggle}
+                onClick={changeHandler}
             />
         </div>
     )
 }
 
-// Header.defaultProps = {
-//     isOpen: true,
-//     toggle: (isOpen) => !isOpen,
-//     child: "Hello"
-// }
+Header.defaultProps = {
+    changeHandler: null,
+    children: "Modal Title"
+}
 
 export default Header

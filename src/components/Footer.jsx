@@ -1,14 +1,12 @@
-import Header from "./Header";
-
 const Footer = (props) => {
-    const {children, toggle} = props
+    const {children, changeHandler} = props
 
     return (
         <div className="modal-footer">
             <button
                 type="button"
                 className="modal-close-button btn btn-secondary"
-                onClick={toggle}
+                onClick={changeHandler}
             >
                 {children}
             </button>
@@ -16,10 +14,9 @@ const Footer = (props) => {
     )
 }
 
-// Footer.defaultProps = {
-//     toggle: () => {
-//
-//     }
-// }
+Footer.defaultProps = {
+    changeHandler: null,
+    children: "Cancel"
+}
 
 export default Footer

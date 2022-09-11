@@ -9,7 +9,7 @@ class App extends React.Component {
         }
     };
 
-    toggle = () => {
+    changeHandler = () => {
         this.setState({
             isOpen: !this.state.isOpen,
         });
@@ -18,8 +18,8 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <button type="button" className="modal-open-button btn btn-danger" onClick={this.toggle}>Open</button>
-                <Modal isOpen={this.state.isOpen} toggle={this.toggle} />
+                <button type="button" className="modal-open-button btn btn-danger" onClick={this.changeHandler}>Open</button>
+                <Modal isOpen={this.state.isOpen} changeHandler={this.changeHandler} />
             </div>
         );
     }

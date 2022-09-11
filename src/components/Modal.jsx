@@ -10,7 +10,7 @@ class Modal extends React.Component {
     static Footer = Footer
 
     render() {
-        const {isOpen, toggle} = this.props
+        const {isOpen, changeHandler} = this.props
         const modalClass = cn ({
             'modal': !isOpen,
             'modal fade show': isOpen
@@ -21,9 +21,9 @@ class Modal extends React.Component {
             <div className={modalClass} style={modalStyles} role="dialog">
                 <div className="modal-dialog">
                      <div className="modal-content">
-                         <Modal.Header toggle={toggle}>Modal title</Modal.Header>
+                         <Modal.Header changeHandler={changeHandler}>Modal title</Modal.Header>
                          <Modal.Body>Lorem ipsum dolor sit amet, consectetur adipisicing elit</Modal.Body>
-                         <Modal.Footer toggle={toggle}>Cancel</Modal.Footer>
+                         <Modal.Footer changeHandler={changeHandler}>Cancel</Modal.Footer>
                     </div>
                 </div>
              </div>
